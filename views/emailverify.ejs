@@ -1,0 +1,45 @@
+<% include ./partials/header %>
+<script>
+$(document).ready(function(){
+	var from,to,subject,text;
+	$("#send_email").click(function(){		
+		to=$("#to").val();	
+		if(!to){
+			$("#message").text("Enter your email id first..!!       ");
+		}	else{
+		$("#message").text("Sending E-mail....Please wait     ");
+		$.get("https://desolate-chamber-68077.herokuapp.com/send",{to:to},function(data){
+		if(data=="sent")
+		{
+			$("#message").empty().html("<p>Email is been sent at "+to+" . Please check inbox !</p>");
+		}
+
+});
+	}
+	});
+});
+</script>
+
+
+
+<div class="container">
+<div class="row">
+	<h1 style="text-align:center">Enter email for Registration</h1>
+			<div style="width:30%;margin:20px auto;">
+		
+
+			<div class="form-group">
+				
+				<input class="form-control" type="text" style="margin-bottom: 0px" id="to" placeholder="Enter Your email id here..." required>
+
+			</div>
+			
+				<div > <button id="send_email"class="btn btn-primary btn-block" style="margin-bottom: 0px">Register</button></div>
+			</div>
+	<div id="message" ></div>
+</div>
+
+</div>
+
+
+<% include ./partials/footer %>

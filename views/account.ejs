@@ -1,0 +1,33 @@
+<% include ./partials/header%>
+<div class="ui main text container">
+    <div class="ui huge header"><i class="book icon"></i><%=user.username%>'s Books</div>
+    <div class="ui top attached segment" style="background:none ;paddingBottom:40px;border: 1px solid #43C6AC;">
+        <div class="ui divided items">
+           <% book.forEach(function(el){ %>
+<div class="item">
+    <div class="image">
+        <img src="<%=el.image[0]%>">
+    </div>
+    <div class="content">
+        <a class="header" href="/books/<%=el._id%>"><%=el.name%></a>
+        <div class="meta">
+            <span><%=el.created.toDateString()%></span>
+        </div>
+        <div class="description">
+        <p><%= el.description.substring(0,100);%>...</p>
+        </div>    
+            <div class="extra">
+                    <a href="/books/<%=el._id%>/edit" id="edit" onclick="return confirm('Are you sure you want to edit this book');"><i class="fas fa-edit"></i>Update</a>
+                    <form id="delete" action="/books/<%=el._id%>?_method=DELETE" method="POST">
+                        <button  id="delete1" onclick="return confirm('Are you sure you want to delete this book');" ><i class="fas fa-times"></i>Delete</button>
+                    </form>
+    <span style="float:right; color:black"><strong>₹<%=el.price%></strong></span>
+        </div>
+    </div>    
+</div>
+<% }); %>
+        </div>
+    </div>
+</div>
+<a href="/books" class="positive ui button">Go Back</a>
+<% include ./partials/footer%>

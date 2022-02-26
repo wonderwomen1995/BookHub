@@ -1,0 +1,32 @@
+<% include ../partials/header%>
+<div class="ui main text container">
+    <div class="ui huge header"><i class="book icon"></i>Book Hub</div>
+    <div class="ui top attached segment"style="background:none;border: 1px solid #1a2a6c;">
+        <div class="ui divided items">
+           <% book.forEach(function(el){ %>
+<div class="item">
+    <div class="image">
+        <img src="<%=el.image[0]%>">
+    </div>
+    <div class="content">
+        <a class="header" href="/books/<%=el._id%>"><%=el.name%></a>
+        <div class="meta">
+            <span><%=el.created.toDateString()%></span>
+        </div>
+        <div class="description">
+        <p><%= el.description.substring(0,100);%>...</p>
+        </div>    
+            <div class="extra">
+            <a href="/books/<%=el._id%>">
+        <button class="btn btn-primary">More Info</button>
+    </a>
+    <span style="float:right; color:black"><strong>₹<%=el.price%></strong></span>
+        </div>
+    </div>
+    
+</div>
+<% }); %> 
+        </div>
+    </div>
+</div>
+<% include ../partials/footer%>

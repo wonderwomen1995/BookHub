@@ -1,0 +1,111 @@
+.thumbnail img{
+    width: 100%;
+}
+.thumbnail{
+    padding:0;
+}
+.thumbnail .caption-full{
+    padding: 9px;
+}
+#form{
+    margin-left:300px;
+}
+#delete{
+    display: inline;
+}
+#delete1{
+    color: red;
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    overflow: hidden; 
+}
+#edit{
+    color: #00FF00;
+}
+#buy{
+    -webkit-appearance:caret;
+    background:none;
+    color: orange;
+}
+#hr {
+    overflow: visible; /* For IE */
+    padding: 0;
+    border: none;
+    border-top: solid 1px grey;
+    color: #333;
+    text-align: center;
+}
+#hr:after {
+    display: inline-block;
+    position: relative;
+    top: -0.7em;
+    font-size: 1.5em;
+    padding: 0 0.25em;
+    background: white;
+}
+#change{
+    height:10%;
+    width: 100%;
+}
+
+#bookdelete{
+  background: red;
+}
+i.icon {
+    font-size:2.5em;
+}
+.container.main {
+    margin-top: 4.0em;
+}
+.navbar-inverse {
+      background: #1a2a6c;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #fdbb2d, #b21f1f, #1a2a6c);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #fdbb2d, #b21f1f, #1a2a6c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+      color: white;
+      border:1px solid #732626;
+    }
+.navbar-inverse .navbar-brand, .navbar-inverse a{
+      color:white;
+    }
+.navbar-inverse .navbar-nav>li>a {
+      color: white;
+    } 
+body{
+    padding-top: 70px;
+    color:#1a2a6c;
+    background: #FFEFBA;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #FFFFFF, #FFEFBA);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #FFFFFF, #FFEFBA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+
+}
+.showContainer{
+   max-width:60em;
+   border:1px solid #1a2a6c;
+}
+.mySlides{
+display:block;
+margin-left: auto;
+margin-right: auto;
+width: 50%;
+margin-bottom: 20px;
+}
+h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, p:first-child{
+    margin-top: 20px;
+    font-family: Chonburi;
+}
+.back_color{
+    background:none;
+}
+.alert-danger{
+background-color: #e8c1c1ba;
+}
+#message{
+ text-align: center;
+}
+.inline-form {
+    display: inline;
+}
